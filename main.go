@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"malcolmdeck/adventofcode2020/level1"
+)
 
 func main() {
-	fmt.Println("Hello, world.")
+	level1.Part1()
 }
