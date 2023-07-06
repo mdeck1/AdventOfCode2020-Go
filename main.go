@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	level1.Part1()
+	level1.Part2()
 }
