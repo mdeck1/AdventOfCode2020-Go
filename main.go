@@ -1,9 +1,10 @@
 package main
 
 import (
-	"malcolmdeck/adventofcode2020/level1"
+	//"malcolmdeck/adventofcode2020/level1"
+	"malcolmdeck/adventofcode2020/level2"
 )
 
 func main() {
-	level1.Part2()
+	level2.Part2()
 }
