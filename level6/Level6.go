@@ -30,7 +30,7 @@ func Part2() {
 		for i < len(lines) && lines[i] != "" {
 			howManyPeople++
 			for _, c := range lines[i] {
-				curr, _ := set[c]
+				curr := set[c]
 				set[c] = curr + 1
 			}
 			i++
