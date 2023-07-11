@@ -11,5 +11,5 @@ import (
 )
 
 func main() {
-	level7.Part2()
+	level7.Part1()
 }

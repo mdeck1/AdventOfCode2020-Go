@@ -14,23 +14,17 @@ type multibag struct {
 
 func Part1() {
 	lines := utils.ReadFile("level7\\level7data.txt")
-	bag_map := make(map[string][]multibag)
 	reverse_bag_map := make(map[string][]string)
 	for _, line := range lines {
 		words := strings.Fields(line)
 		outer_bag_name := words[0] + " " + words[1]
 		if len(words) == 7 {
-			bag_map[outer_bag_name] = nil //[]multibag{}
 			continue
 		}
-		bags := make([]multibag, len(words)/4-1)
 		for i := 4; i < len(words); i += 4 {
-			count, _ := strconv.Atoi(words[i])
 			inner_bag_name := words[i+1] + " " + words[i+2]
-			bags = append(bags, multibag{count: count, bag_name: inner_bag_name})
 			reverse_bag_map[inner_bag_name] = append(reverse_bag_map[inner_bag_name], outer_bag_name)
 		}
-		bag_map[outer_bag_name] = bags
 	}
 	bags_to_check := make([]string, 0)
 	bags_to_check = append(bags_to_check, reverse_bag_map["shiny gold"]...)
@@ -53,7 +47,6 @@ func Part1() {
 func Part2() {
 	lines := utils.ReadFile("level7\\level7data.txt")
 	bag_map := make(map[string][]multibag)
-	reverse_bag_map := make(map[string][]string)
 	for _, line := range lines {
 		words := strings.Fields(line)
 		outer_bag_name := words[0] + " " + words[1]
@@ -66,7 +59,6 @@ func Part2() {
 			count, _ := strconv.Atoi(words[i])
 			inner_bag_name := words[i+1] + " " + words[i+2]
 			bags = append(bags, multibag{count: count, bag_name: inner_bag_name})
-			reverse_bag_map[inner_bag_name] = append(reverse_bag_map[inner_bag_name], outer_bag_name)
 		}
 		bag_map[outer_bag_name] = bags
 	}
