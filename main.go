@@ -9,9 +9,10 @@ import (
 	// "malcolmdeck/adventofcode2020/level6"
 	// "malcolmdeck/adventofcode2020/level7"
 	// "malcolmdeck/adventofcode2020/level8"
-	"malcolmdeck/adventofcode2020/level9"
+	// "malcolmdeck/adventofcode2020/level9"
+	"malcolmdeck/adventofcode2020/level10"
 )
 
 func main() {
-	level9.Part2()
+	level10.Part2()
 }
